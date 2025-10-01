@@ -85,11 +85,11 @@
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1500,
+        autoplay: true,
+        smartSpeed: 800,
         dots: false,
-        loop: true,
-        nav : true,
+        loop: ($('.gallery-carousel .item').length > 5), // Solo activa loop si hay más de 5 imágenes
+        nav : false,
         navText : [
             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
@@ -202,6 +202,31 @@ fetch('https://angelcr87.github.io/Frankie-Griss/invitados/invitados.json')
     console.error('Error al cargar el JSON:', err);
     document.body.innerHTML = '<h2>Error al cargar la invitación</h2>';
   });
+
+
+  // ...existing code...
+
+// Música de fondo en loop
+document.addEventListener('DOMContentLoaded', function() {
+    // Crea el elemento de audio
+    var audio = document.createElement('audio');
+    audio.src = 'audio.mp3'; // Asegúrate de tener el archivo en la ruta correcta
+    audio.loop = true;
+    audio.volume = 0.5; // Opcional: volumen inicial (0.0 a 1.0)
+    audio.id = 'bg-music';
+    audio.style.display = 'none'; // Oculta el reproductor
+
+    document.body.appendChild(audio);
+
+    // Intenta reproducir al primer clic/tap del usuario
+    function startMusic() {
+        audio.play().catch(()=>{});
+        document.removeEventListener('click', startMusic);
+        document.removeEventListener('touchstart', startMusic);
+    }
+    document.addEventListener('click', startMusic);
+    document.addEventListener('touchstart', startMusic);
+});
 
 // fetch('https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1NglSzFpoGn0uFzJEsmXXWNrys4-tH6fDQHYKkNM4fk4/gviz/tq?tqx=out:json')
 //   .then(res => res.text())
