@@ -186,7 +186,7 @@ document.querySelector('.parallax-header').addEventListener('mousemove', functio
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
-fetch('http://127.0.0.1:5500/invitados/invitados.json')
+fetch('https://angelcr87.github.io/Frankie-Griss/invitados/invitados.json')
   .then(res => res.json())
   .then(data => {
     const invitado = data.find(item => item.id === id);
