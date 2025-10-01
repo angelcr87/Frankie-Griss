@@ -210,13 +210,16 @@ fetch('https://angelcr87.github.io/Frankie-Griss/invitados/invitados.json')
 document.addEventListener('DOMContentLoaded', function() {
     // Crea el elemento de audio
     var audio = document.createElement('audio');
-    audio.src = 'audio.mp3'; // Asegúrate de tener el archivo en la ruta correcta
+    audio.src = 'audio2.mp3'; // Asegúrate de tener el archivo en la ruta correcta
     audio.loop = true;
-    audio.volume = 0.5; // Opcional: volumen inicial (0.0 a 1.0)
+    audio.volume = 0.8;
     audio.id = 'bg-music';
-    audio.style.display = 'none'; // Oculta el reproductor
+    audio.style.display = 'none';
 
     document.body.appendChild(audio);
+
+    // Precarga el audio para que esté listo al interactuar
+    audio.load();
 
     // Intenta reproducir al primer clic/tap del usuario
     function startMusic() {
@@ -224,8 +227,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.removeEventListener('click', startMusic);
         document.removeEventListener('touchstart', startMusic);
     }
-    document.addEventListener('click', startMusic);
-    document.addEventListener('touchstart', startMusic);
+    document.addEventListener('click', startMusic, { once: true });
+    document.addEventListener('touchstart', startMusic, { once: true });
 });
 
 // fetch('https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1NglSzFpoGn0uFzJEsmXXWNrys4-tH6fDQHYKkNM4fk4/gviz/tq?tqx=out:json')
