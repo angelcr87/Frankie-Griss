@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Francisco & Grisel</title>
+    <title>Francisco & Grissel</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- <meta content="Free HTML Templates" name="keywords">
-    <meta content="" name="description"> -->
+    <meta content="Free HTML Templates" name="description"> -->
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo FyG.svg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +17,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
+    <!-- <link href="css/all.min.css" rel="stylesheet"> -->
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="font-secondary text-white mb-n2">Francisco <span class="text-primary">&</span> Grisel</h1>
+            <h1 class="font-secondary text-yellow mb-n2">Francisco <span class="text-yellow">&</span> Grissel</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -44,8 +44,9 @@
                 <a href="#story" class="nav-item nav-link">Historia</a>
                 <a href="#gallery" class="nav-item nav-link">Fotos</a>
             </div>
-            <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                <h1 class="font-secondary text-white mb-n2">Francisco <span class="text-primary">&</span> Grisel</h1>
+            <a href="#" class="navbar-brand mx-5 d-none d-lg-block">
+                <h1 class="font-secondary text-yellow mb-n2">Francisco <span class="text-yellow">&</span> Grissel</h1>
+                
             </a>
             <div class="navbar-nav mr-auto py-0">
                 <a href="#family" class="nav-item nav-link">Familia</a>
@@ -109,15 +110,20 @@
 
   <header class="parallax-header" style="position: relative; overflow: hidden; height: 100vh;">
     <video class="parallax-video" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:1;">
-        <source src="videos/videoPareja.mp4" type="video/mp4" />
+        <source src="videos/frank_griss.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5.
     </video>
     <div class="overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);z-index:2;"></div>
     <div class="content" style="position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-        <div class="p-3" style="max-width: 900px;">
-            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Francisco & Grisel</h1>
+        <div class="p-3" style="max-width: 900px; text-align: center;">
+            <!-- <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Francisco & Grisel</h1> -->
+             
+             <img src="img/Logo FyG white.png" alt="Francisco & Grissel" style="width: 40%; height: auto; margin-top: 5%;">
+             
+             <p class="text-yellow" style="font-family:Regencie;">FRANCISCO & GRISSEL</p>
+             
             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Te invitamos a nuestra Boda</h3>
+                <h3 class="text-uppercase font-weight-normal text-yellow m-0" style="letter-spacing: 2px; font-family: Regencie;">CAMINO AL ALTAR</h3>
             </div>
             <br><br>
             <div class="countdown-container text-center py-4">
@@ -163,6 +169,41 @@
     </div>
     <!-- Video Modal End -->
 
+    <!-- <h1>Hola <span id="nombre"></span>!</h1>
+<p><span id="mensaje"></span></p> -->
+
+    <!-- Invitados Start -->
+    <div class="container-fluid py-5" id="invitados">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Invitación Especial</h6>
+                <h1 class="font-secondary display-4">¡Queridos invitados!</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-secondary rounded p-4 text-center animate__animated animate__fadeInUp">
+                        <h2 class="mb-2 text-yellow" style="font-size:2rem;">                            
+                            <span id="invitado"></span>
+                        </h2>
+                        <p class="mb-3" style="font-size:1.2rem;">
+                            Nos llena de alegría invitarles a compartir con nosotros el inicio de nuestra historia juntos. 
+                            Su presencia hará nuestro día aún más especial.
+                        </p>
+                        <div class="d-inline-block border-top border-bottom border-light py-2 px-4 mb-3">
+                            <span class="font-weight-bold text-primary text-yellow" style="font-size:1.1rem;">
+                                Número de personas invitadas: <span style="font-size:1.3rem;" id="cantidad"></span>
+                            </span>
+                        </div>
+                        <p class="mb-0" style="font-size:1rem;">
+                            ¡Esperamos celebrar este momento inolvidable a su lado!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Invitados End -->
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
@@ -175,9 +216,9 @@
             <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0 animate__animated animate__fadeInLeft fade-in-left">
                 <div class="col-md-6 p-0 text-center text-md-right ">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="mb-3">El Novio</h3>
-                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Frankie</h3>
+                        <h3 class="mb-3 text-yellow">El Novio</h3>
+                        <p>Amante de la música en todas sus formas, de los momentos tranquilos y de las risas compartidas. Disfruto cada instante con mi familia, mis perros que son parte de mi corazón y, sobre todo, con la mujer que elegí para caminar conmigo esta aventura de vida. Hoy celebro el amor que nos une y que da sentido a todo lo que soy.</p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3 text-yellow"><i class="fa fa-heart text-primary pr-3 text-yellow"></i>Frankie</h3>
                         <!-- <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -187,18 +228,18 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-0 " style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/frankie.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/frankie-novio.jpg" style="object-fit: cover;">
                 </div>
             </div>
             <div class="row m-0 animate__animated animate__fadeInRight fade-in-right">
                 <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/griss.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/Griss-novia.jpg" style="object-fit: cover;">
                 </div>
                 <div class="col-md-6 p-0 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="mb-3">La Novia</h3>
-                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Gris</h3>
+                        <h3 class="mb-3 text-yellow">La Novia</h3>
+                        <p>Soy la que disfruta bailar aunque no siempre escuche música, la que sonríe fácil pero elige con cuidado dónde entregar su energía. A veces extrovertida, a veces reservada, pero siempre auténtica. Encuentro mi paz al lado de mis perros, en los abrazos de mis amigos más cercanos, del calor de mi familia y en la seguridad de saber que hoy elijo compartir mi vida con quien me hace sentir en casa.</p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3 text-yellow"><i class="fa fa-heart text-primary pr-3 text-yellow"></i>Griss</h3>
                         <!-- <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -224,50 +265,50 @@
             <div class="container timeline position-relative p-0">
                 <div class="row timeline-item  ">
                     <div class="col-md-6 text-center text-md-right animate__animated animate__fadeInLeft fade-in-left">
-                        <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt="">
+                        <img class="img-fluid mr-md-3" src="img/primer-encuentro.jpg" alt="">
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3 animate__animated animate__fadeInRight fade-in-right">
-                            <h4 class="mb-2">Primer encuentro</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2 text-yellow">Primer encuentro</h4>
+                            <p class="text-uppercase mb-2">08 Enero 2018</p>
+                            <p class="m-0">El destino nos había cruzado antes sin que lo notáramos… hasta que una red social hizo que por fin nos encontráramos de verdad. Lo que parecía casual, hoy sabemos que estaba destinado a ser.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right animate__animated animate__fadeInLeft fade-in-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="mb-2">Primera cita</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2 text-yellow">Primera cita</h4>
+                            <p class="text-uppercase mb-2">16 Enero 2018</p>
+                            <p class="m-0">Nos vimos a escondidas, con esa emoción que solo dan los comienzos. Platicamos sin darnos cuenta del tiempo y terminamos en un paseo en auto, cruzando un puente iluminado por la noche. Ahí, entre risas y música, el carro se quedó sin batería… pero nosotros descubrimos que teníamos toda la energía del mundo para seguir compartiendo momentos juntos.</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left animate__animated animate__fadeInRight fade-in-right">
-                        <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt="">
+                        <img class="img-fluid ml-md-3" src="img/primera-cita.jpg" alt="">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right animate__animated animate__fadeInLeft fade-in-left">
-                        <img class="img-fluid mr-md-3" style="width: 300px; height: 300px;" src="img/foto2.jpg" alt="">
+                        <img class="img-fluid mr-md-3" src="img/propuesta.jpg" alt="">
                     </div>
                     <div class="col-md-6 text-center text-md-left animate__animated animate__fadeInRight fade-in-right">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="mb-2">Propuesta</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2 text-yellow">Propuesta</h4>
+                            <p class="text-uppercase mb-2">07 Febrero 2025</p>
+                            <p class="m-0">En un viaje a Querétaro, el destino nos regaló un instante mágico: solos en una azotea, bajo el cielo estrellado y el frío de la noche. Entre una plática profunda, lágrimas y risas, llegó el momento en el que el corazón habló más fuerte que los nervios. Con las manos temblando por la adrenalina, él sacó el anillo y con toda certeza pidió compartir la vida entera juntos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right animate__animated animate__fadeInLeft fade-in-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="mb-2">Compromiso</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2 text-yellow">Compromiso</h4>
+                            <p class="text-uppercase mb-2">31 Agosto 2025</p>
+                            <p class="m-0">Aunque nuestro compromiso comenzó simbólicamente hace tiempo, el 31 de agosto se convirtió en un momento único. Ese día, rodeados de nuestras familias y seres queridos, sellamos nuestro amor de celebrando todo lo que hemos construido juntos y lo que está por venir.</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left animate__animated animate__fadeInRight fade-in-right">
-                        <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
+                        <img class="img-fluid ml-md-3" src="img/compromiso.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -324,52 +365,7 @@
     </div>
     <!-- Gallery End -->
 
-
-    <!-- Event Start -->
-    <div class="container-fluid py-5" id="event">
-        <div class="container py-5">
-            <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Evento</h6>
-                <h1 class="font-secondary display-4">Nuestro evento de bodas</h1>
-                <i class="far fa-heart text-dark"></i>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem elitr justo</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
-                        <h4 class="mb-3">La misa</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
-                        <p class="mb-0">12:00AM - 13:00PM</p>
-                    </div>
-                    <br>
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">                        
-                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.158975354249!2d-89.6974465249215!3d20.94612998068263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567331fb7dc975%3A0xaa44180ca63bbfa1!2sHecho%20con%20magia%20MID!5e0!3m2!1ses-419!2smx!4v1754454730493!5m2!1ses-419!2smx" width="60%" height="20%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="text-center text-md-left ml-md-3">
-                        <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
-                        <h4 class="mb-3">La recepción</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
-                        <p class="mb-0">12:00AM - 13:00PM</p>
-                    </div>
-                    <br>
-                    <div class="text-center text-md-left ml-md-3">                        
-                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.158975354249!2d-89.6974465249215!3d20.94612998068263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567331fb7dc975%3A0xaa44180ca63bbfa1!2sHecho%20con%20magia%20MID!5e0!3m2!1ses-419!2smx!4v1754454730493!5m2!1ses-419!2smx" width="60%" height="20%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Event End -->
-
-
-    <!-- Friends & Family Start -->
+      <!-- Friends & Family Start -->
     <div class="container-fluid py-5" id="family">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
@@ -377,21 +373,21 @@
                 <h1 class="font-secondary display-4"> Del Novio & De la Novia</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
                         <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Novio</li>
                         <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Novia</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/padres-frankie.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Padre</p>
+                            <h6 class="mb-3 text-white">Francisco Pérez & Aida Aguileta</h6>
+                            <p class="text-uppercase">Padres del novio</p>
                             <!-- <div class="d-inline-block">
                                 <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -403,10 +399,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/mama-griss.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Padre</p>
+                            <h6 class="mb-3 text-white">Carolina Koh</h6>
+                            <p class="text-uppercase">Madre de la novia</p>
                             <!-- <div class="d-inline-block">
                                 <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -418,55 +414,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/padrinos-novios.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Madre</p>
-                            <!-- <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/bridesmaid-2.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Madre</p>
-                            <!-- <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-3.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Hermano</p>
-                            <!-- <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-2.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Hermana</p>
+                            <h6 class="mb-3 text-white">Arturo Muñoz & Juanita Moguel</h6>
+                            <p class="text-uppercase">Padrinos</p>
                             <!-- <div class="d-inline-block">
                                 <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -482,6 +433,91 @@
     <!-- Friends & Family End -->
 
 
+    <!-- Event Start -->
+    <div class="container-fluid py-5" id="event">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Evento</h6>
+                <h1 class="font-secondary display-4">Nuestro evento de bodas</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Encontrarnos fue lo mejor que no ha pasado. Permanecer juntos es la decisión más maravillosa que a Dios queremos confiar.</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <img class="img-fluid mb-4 evento" src="img/iglesia.jpg" alt="">
+                        <h4 class="mb-3">La misa</h4>
+                        <p class="mb-2 text-primary">Iglesia Purísima Concepción, Pomuch, Camp.</p>
+                        <p class="mb-0 text-primary">18:00 hrs.</p>
+                    </div>
+                    <br>
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">                        
+                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.903771623466!2d-90.1746982!3d20.1380618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11573b2ae4def235%3A0x5b612f113d24ddb3!2zUHVyw61zaW1hIENvbmNlcGNpw7Nu!5e0!3m2!1ses-419!2smx!4v1759296341690!5m2!1ses-419!2smx" width="60%" height="20%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-left ml-md-3">
+                        <img class="img-fluid mb-4 evento" src="img/recepcion.jpg" alt="">
+                        <h4 class="mb-3">La recepción</h4>
+                        <p class="mb-2 text-primary">Centro de Actividades D'Roli, Hkan, Camp.</p>
+                        <p class="mb-0 text-primary">20:00 hrs.</p>
+                    </div>
+                    <br>
+                    <div class="text-center text-md-left ml-md-3">                        
+                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.7237351290196!2d-90.1333275!3d20.187225099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f87b145a70cda5%3A0x8d40aaa329fbb18c!2sCentro%20de%20Actividades%20D&#39;Roli!5e0!3m2!1ses-419!2smx!4v1759296534422!5m2!1ses-419!2smx" width="60%" height="20%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event End -->
+
+    <!-- dress code start -->
+
+       <div class="container-fluid py-5" id="event">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Dress Code</h6>
+                <h1 class="font-secondary display-4">Código de vestimenta</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">
+                        Les presentamos el código de vestimenta para nuestro evento. Agradecemos su amable disposición para respetar el patrón de colores sugerido.
+                    </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6  col-sm-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0 dress-section">
+                        <!-- <img class="img-fluid mb-4" style="width: 400px; height: 450px;" src="img/dress code mujer.png" alt=""> -->
+                        <img class="img-fluid mb-4" style="width: 100%; height: auto;" src="img/dress-mujer.png" alt="">
+                        <h4 class="mb-3">Mujeres</h4>
+                        <p class="mb-2 text-primary">Vestido largo</p>
+                        <p class="mb-0 text-primary" style=" font-weight: bold;">No blanco - No Rojo</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="text-center text-md-left ml-md-3 dress-section">
+                        <img class="img-fluid mb-4" style="width: 100%; height: auto;" src="img/dress-hombre.png" alt="">
+                        <h4 class="mb-3">Hombres</h4>
+                        <p class="mb-2 text-primary">Traje Formal</p>
+                        <p class="mb-0 text-primary" style=" font-weight: bold;">Corbata - Moño</p>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dress code end -->
+  
+
+
     <!-- RSVP Start -->
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
@@ -491,17 +527,17 @@
                 <i class="far fa-heart text-dark"></i>
             </div>
                 <div class="owl-carousel mensajes-carousel mb-4">
-                    <div class="mensaje-item bg-secondary text-center p-4 rounded">
-                        <h5 class="font-weight-bold mb-2">Juan Pérez</h5>
-                        <p class="mb-0">¡Felicidades! Les deseo toda la felicidad del mundo en esta nueva etapa.</p>
+                    <div class="mensaje-item  text-center p-4 rounded">
+                        <h5 class="font-weight-bold mb-2 text-primary">Juan Pérez</h5>
+                        <p class="mb-0 text-primary">¡Felicidades! Les deseo toda la felicidad del mundo en esta nueva etapa.</p>
                     </div>
-                    <div class="mensaje-item bg-secondary text-center p-4 rounded">
-                        <h5 class="font-weight-bold mb-2">María López</h5>
-                        <p class="mb-0">Que su amor siga creciendo cada día. ¡Enhorabuena!</p>
+                    <div class="mensaje-item  text-center p-4 rounded">
+                        <h5 class="font-weight-bold mb-2 text-primary">María López</h5>
+                        <p class="mb-0 text-primary">Que su amor siga creciendo cada día. ¡Enhorabuena!</p>
                     </div>
-                    <div class="mensaje-item bg-secondary text-center p-4 rounded">
-                        <h5 class="font-weight-bold mb-2">Carlos Ramírez</h5>
-                        <p class="mb-0">Un abrazo grande y los mejores deseos para su boda.</p>
+                    <div class="mensaje-item  text-center p-4 rounded">
+                        <h5 class="font-weight-bold mb-2 text-primary">Carlos Ramírez</h5>
+                        <p class="mb-0 text-primary">Un abrazo grande y los mejores deseos para su boda.</p>
                     </div>                   
                 </div>
                 <div id="mensaje-indicador" class="text-center mt-2 font-weight-bold text-primary"></div>
@@ -512,14 +548,14 @@
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-12">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nombre"/>
+                                    <input type="text" class="form-control text-primary  border-0 py-4 px-3" placeholder="Nombre"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required="required"></textarea>
+                                <textarea class="form-control  text-primary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Enviar</button>
+                                <button class="btn btn-primary  font-weight-bold py-3 px-5" type="submit">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -568,6 +604,109 @@
         </div>
     </div>
     <!-- RSVP End -->
+
+    <!-- Mesa de Regalos Start -->
+    <!-- <div class="container-fluid py-5" id="mesa-regalos">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Mesa de Regalos</h6>
+                <h1 class="font-secondary display-4">Lluvia de Sobres & Transferencia</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center align-items-stretch">
+                <div class="col-md-4 d-flex">
+                    <div class="w-100 d-flex flex-column align-items-center">
+                        <h4 class="mb-3 ">LLuvia de Sobres</h4>
+                        <div class="bg-secondary rounded p-4 d-inline-block text-left flex-grow-1" style="min-width:260px;">
+                            <p class="mb-2">
+                                Si deseas apoyarnos, podrás cooperar con una <strong>lluvia de sobres</strong> durante la recepción. ¡Tu presencia y cariño son nuestro mejor regalo!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="w-100 d-flex flex-column align-items-center">
+                        <h4 class="mb-3 ">Mesa de Regalos</h4>
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center" style="width:100%;">
+                            <img src="img/mes de regalos.jpg" alt="" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="w-100 d-flex flex-column align-items-center">
+                        <h4 class="mb-3 ">Datos Bancarios</h4>
+                        <div class="bg-secondary rounded p-4 d-inline-block text-left flex-grow-1" style="min-width:260px;">
+                            <p class="mb-2"><strong>Banco:</strong> BBVA</p>
+                            <p class="mb-2"><strong>Nombre:</strong> Francisco Pérez</p>
+                            <p class="mb-2"><strong>Cuenta:</strong> 1234567890</p>
+                            <p class="mb-2"><strong>CLABE:</strong> 012345678901234567</p>
+                            <p class="mb-0"><strong>Concepto:</strong> Lluvia de sobres</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4" style="padding-top: 5%;">
+                <div class="col-lg-8 text-center">
+                    <p class="text-muted">¡Gracias por tu generosidad y por acompañarnos en este día tan especial!</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Mesa de Regalos End -->
+
+    <!-- Mesa de Regalos Start -->
+    <div class="container-fluid py-5" id="mesa-regalos">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Presentes</h6>
+                <!-- <h1 class="font-secondary display-6">El mejor regalo es compartir con nosotros este día tan especial. Si deseas hacerlo de otra manera te dejamos nuestros datos bancarios y mesa de regalos a tu disposición. En la recepción, habrá lluvia de sobres</h1> -->
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center align-items-stretch">
+                <div class="col-md-4 d-flex">
+                    <div class="w-100 d-flex flex-column align-items-center">
+                        <h4 class="mb-3">Lluvia de Sobres</h4>
+                        <div class="bg-secondary rounded p-4 d-inline-block text-left flex-grow-1" style="min-width:260px;">
+                            <p class="mb-2">
+                                Disponible en la recepcion. ¡Tu presencia y cariño son nuestro mejor regalo!                              
+                               
+                            </p>
+                             <img src="img/sobre2-1.png" style="width: 100%; height: auto;" alt="sobre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="w-100 d-flex flex-column align-items-center">
+                        <h4 class="mb-3">Mesa de Regalos Online</h4>
+                        <p class="mt-2 text-primary">Haz clic en la imagen para ver nuestra mesa de regalos.</p>
+                        <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51752615" target="_blank" rel="noopener">
+                            <img src="img/mes de regalos.jpg" alt="Mesa de Regalos" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="w-100 d-flex flex-column align-items-center">
+                        <h4 class="mb-3">Datos Bancarios</h4>
+                        <div class="bg-secondary rounded p-4 d-inline-block text-left flex-grow-1" style="min-width:260px;">
+                            <p class="mb-2"><strong>Banco:</strong> Mercado Pago</p>
+                            <p class="mb-2"><strong>Nombre:</strong> Grissel Guadalupe Guerra koh</p>
+                            <!-- <p class="mb-2"><strong>Cuenta:</strong> 1234567890</p> -->
+                            <p class="mb-2"><strong>CLABE:</strong> 7229-69069-84478-7211</p>
+                            <!-- <p class="mb-0"><strong>Concepto:</strong> Lluvia de sobres</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4" style="padding-top: 5%;">
+                <div class="col-lg-8 text-center">
+                    <p class="text-muted">¡Gracias por tu generosidad y por acompañarnos en este día tan especial!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mesa de Regalos End -->
+
 
     <!-- <div class="parallax-container">
     <div class="parallax-bg"></div>

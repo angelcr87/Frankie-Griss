@@ -179,3 +179,39 @@ document.querySelector('.parallax-header').addEventListener('mousemove', functio
         overlay.style.transform = 'translate(' + (xPercent * 10) + 'px, ' + (yPercent * 5) + 'px)';
     }
 });
+
+
+// --- Google Sheets fetch ---
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+fetch('http://127.0.0.1:5500/invitados/invitados.json')
+  .then(res => res.json())
+  .then(data => {
+    const invitado = data.find(item => item.id === id);
+    if (invitado) {
+      document.getElementById('invitado').textContent = invitado.Invitados;
+      document.getElementById('cantidad').textContent = invitado.Cantidad;
+    // console.log(`Hola ${invitado.Invitados}, ${invitado.Cantidad}`);
+    } else {
+      document.body.innerHTML = '<h2>Invitación no válida</h2>';
+    }
+  })
+  .catch(err => {
+    console.error('Error al cargar el JSON:', err);
+    document.body.innerHTML = '<h2>Error al cargar la invitación</h2>';
+  });
+
+// fetch('https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1NglSzFpoGn0uFzJEsmXXWNrys4-tH6fDQHYKkNM4fk4/gviz/tq?tqx=out:json')
+//   .then(res => res.text())
+//   .then(text => {
+//     const json = JSON.parse(text.substr(47).slice(0, -2));
+//     const rows = json.table.rows;
+//     rows.forEach(row => {
+//       const nombre = row.c[0].v;
+//       const mensaje = row.c[1].v;
+//       // Aquí puedes generar tu invitación personalizada
+//       console.log(`Hola ${nombre}, ${mensaje}`);
+//     });
+//   });
