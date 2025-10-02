@@ -9736,6 +9736,7 @@ a.text-dark:hover, a.text-dark:focus {
 .bg-gallery {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gallery.jpg), no-repeat center center;
   background-size: cover;
+  background-position: center center;
 }
 
 .gallery-carousel .owl-nav {
@@ -10014,6 +10015,11 @@ a.text-dark:hover, a.text-dark:focus {
   height: 50%;
 }
 
+/* Puedes agregar esto a tu style.css */
+section, .container-fluid {
+  margin-bottom: 10;
+}
+
 /* #family{
   margin-bottom: 15%;
 } */
@@ -10022,3 +10028,35 @@ a.text-dark:hover, a.text-dark:focus {
     width: 450px;
   height: 400px;
 } */
+
+
+/* Loader styles */
+#site-loader {
+    position: fixed;
+    z-index: 99999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #EEEDE6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+#site-loader img#loader-logo {
+    width: 90px;
+    height: auto;
+    animation: heartbeat 1.2s infinite;
+}
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1);}
+    10%, 30% { transform: scale(1.12);}
+    20%, 40% { transform: scale(0.95);}
+    50% { transform: scale(1.08);}
+    60% { transform: scale(1);}
+}
+body.loading {
+    overflow: hidden !important;
+}
+
+
