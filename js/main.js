@@ -210,23 +210,37 @@ fetch('https://angelcr87.github.io/Frankie-Griss/invitados/invitados.json')
 document.addEventListener('DOMContentLoaded', function() {
     // Crea el elemento de audio
     var audio = document.createElement('audio');
-    audio.src = 'audio2.mp3'; // Asegúrate de tener el archivo en la ruta correcta
     audio.loop = true;
     audio.volume = 0.8;
     audio.id = 'bg-music';
     audio.style.display = 'none';
 
+    // Crea las fuentes de audio
+    var sourceMp3 = document.createElement('source');
+    sourceMp3.src = 'audio2.mp3';
+    sourceMp3.type = 'audio/mpeg';
+
+    var sourceOgg = document.createElement('source');
+    sourceOgg.src = 'audio2.ogg';
+    sourceOgg.type = 'audio/ogg';
+
+    // Agrega las fuentes al elemento de audio
+    audio.appendChild(sourceMp3);
+    audio.appendChild(sourceOgg);
+
+    // Agrega el audio al cuerpo del documento
     document.body.appendChild(audio);
 
-    // Precarga el audio para que esté listo al interactuar
+    // Precarga el audio
     audio.load();
 
-    // Intenta reproducir al primer clic/tap del usuario
+    // Reproduce al primer clic/tap del usuario
     function startMusic() {
-        audio.play().catch(()=>{});
+        audio.play().catch(() => {});
         document.removeEventListener('click', startMusic);
         document.removeEventListener('touchstart', startMusic);
     }
+
     document.addEventListener('click', startMusic, { once: true });
     document.addEventListener('touchstart', startMusic, { once: true });
 });
