@@ -119,7 +119,7 @@
 
 // Cuenta regresiva para el 15 de noviembre con flip effect
 function updateCountdown() {
-    var eventDate = new Date('2025-11-15T00:00:00');
+    var eventDate = new Date('2025-11-15T18:00:00');
     var now = new Date();
     var diff = eventDate - now;
 
@@ -258,5 +258,92 @@ document.addEventListener('DOMContentLoaded', function() {
 //     });
 //   });
 
+//star script envitar mensajes
 
+$('#form-mensaje').on('submit', function(e) {
+  e.preventDefault();
 
+  const nombre = $('#nombre').val().trim();
+  const mensaje = $('#mensaje').val().trim();
+
+  if (!nombre || !mensaje) {
+    mostrarModal('Por favor completa ambos campos.');
+    return;
+  }
+
+  $.ajax({
+    url: 'http://localhost:3000/insertar.php',
+    method: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({ nombre, mensaje }),
+    headers: {
+      'Authorization': 'Basic ' + btoa('admin:Fr@nk&Griss2025')
+    },
+    success: function(respuesta) {
+      mostrarModal('Mensaje recibido con éxito. ¡Gracias por sus buenos deseos ');
+      $('#form-mensaje')[0].reset();
+      cargarMensajes(); // recarga el carrusel con los nuevos mensajes
+    },
+    error: function(xhr) {
+      const error = xhr.responseJSON?.error || '❌ Error al enviar el mensaje.';
+      mostrarModal(error);
+    }
+  });
+});
+
+// Función para mostrar el modal
+function mostrarModal(mensaje) {
+  $('#modalMensaje').text(mensaje);
+  $('#modalRespuesta').modal('show');
+}
+
+//end script enviar mensajes
+
+//start script mostrar mensajes
+
+function cargarMensajes() {
+  $.ajax({
+    url: 'http://localhost:3000/mensajes.php',
+    method: 'GET',
+    headers: {
+      'Authorization': 'Basic ' + btoa('admin:Fr@nk&Griss2025')
+    },
+    success: function(mensajes) {
+      const $carousel = $('.mensajes-carousel');
+      $carousel.trigger('destroy.owl.carousel'); // limpia carrusel previo
+      $carousel.empty(); // limpia contenido
+
+      mensajes.forEach(m => {
+        const item = `
+          <div class="mensaje-item text-center p-4 rounded">
+            <h5 class="font-weight-bold mb-2 text-primary">${escapeHtml(m.nombre)}</h5>
+            <p class="mb-0 text-primary">${escapeHtml(m.mensaje)}</p>
+          </div>`;
+        $carousel.append(item);
+      });
+
+      $carousel.owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 800
+      });
+    },
+    error: function() {
+      console.error('Error al cargar los mensajes');
+    }
+  });
+}
+
+// Función para evitar inyecciones HTML
+function escapeHtml(text) {
+  return $('<div>').text(text).html();
+}
+
+// Llamar al cargar la página
+$(document).ready(function() {
+  cargarMensajes();
+});
+
+//end script mostrar mensajes

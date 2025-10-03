@@ -24,6 +24,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
@@ -618,7 +619,7 @@
                 <i class="far fa-heart text-dark"></i>
             </div>
                 <div class="owl-carousel mensajes-carousel mb-4">
-                    <div class="mensaje-item  text-center p-4 rounded">
+                    <!-- <div class="mensaje-item  text-center p-4 rounded">
                         <h5 class="font-weight-bold mb-2 text-primary">Juan Pérez</h5>
                         <p class="mb-0 text-primary">¡Felicidades! Les deseo toda la felicidad del mundo en esta nueva etapa.</p>
                     </div>
@@ -629,25 +630,25 @@
                     <div class="mensaje-item  text-center p-4 rounded">
                         <h5 class="font-weight-bold mb-2 text-primary">Carlos Ramírez</h5>
                         <p class="mb-0 text-primary">Un abrazo grande y los mejores deseos para su boda.</p>
-                    </div>                   
+                    </div>                    -->
                 </div>
                 <div id="mensaje-indicador" class="text-center mt-2 font-weight-bold text-primary"></div>
                 <br>
              <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-sm-12">
-                                    <input type="text" class="form-control text-primary  border-0 py-4 px-3" placeholder="Nombre"/>
-                                </div>
+                        <form id="form-mensaje">
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                            <input type="text" id="nombre" class="form-control text-primary border-0 py-4 px-3" placeholder="Nombre" required />
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control  text-primary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary  font-weight-bold py-3 px-5" type="submit">Enviar</button>
-                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" class="form-control text-primary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary font-weight-bold py-3 px-5" >Enviar</button>
+                        </div>
                         </form>
                     </div>
                 </div>
@@ -756,7 +757,7 @@
             <div class="row justify-content-center align-items-stretch">
                 <div class="col-md-4 d-flex">
                     <div class="w-100 d-flex flex-column align-items-center">
-                        <h4 class="mb-3">Lluvia de Sobres</h4>
+                        <h4 class="mb-3" style="margin-top: 15%;">Lluvia de Sobres</h4>
                         <div class="bg-secondary rounded p-4 d-inline-block text-left flex-grow-1" style="min-width:260px;">
                             <p class="mb-2" style="text-align: justify;">
                                 Disponible en la recepcion. ¡Tu presencia y cariño son nuestro mejor regalo!                              
@@ -770,7 +771,7 @@
                 </div>
                 <div class="col-md-4 d-flex">
                     <div class="w-100 d-flex flex-column align-items-center">
-                        <h4 class="mb-3">Mesa de Regalos Online</h4>
+                        <h4 class="mb-3" style="margin-top: 15%;">Mesa de Regalos Online</h4>
                         <p class="mt-2 text-primary" style="text-align: justify;">Haz clic en la imagen para ver nuestra mesa de regalos.</p>
                         <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51752615" target="_blank" rel="noopener">
                             <img src="img/mes de regalos.jpg" alt="Mesa de Regalos" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
@@ -780,7 +781,7 @@
                 </div>
                 <div class="col-md-4 d-flex">
                     <div class="w-100 d-flex flex-column align-items-center">
-                        <h4 class="mb-3">Datos Bancarios</h4>
+                        <h4 class="mb-3" style="margin-top: 15%;">Datos Bancarios</h4>
                         <div class="bg-secondary rounded p-4 d-inline-block text-left flex-grow-1" style="min-width:260px;">
                             <p class="mb-2" style="text-align: justify;"><strong>Banco:</strong> Mercado Pago</p>
                             <p class="mb-2" style="text-align: justify;"><strong>Nombre:</strong> Grissel Guadalupe Guerra koh</p>
@@ -842,6 +843,24 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- Modal de respuesta -->
+    <div class="modal fade" id="modalRespuesta" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0">
+        <div class="modal-header bg-secondary text-yellow">
+            <h5 class="modal-title text-white" id="modalLabel">Respuesta</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-dark" id="modalMensaje">
+            <!-- Aquí va el mensaje dinámico -->
+        </div>
+        </div>
+    </div>
+    </div>
+
 
 
     <!-- JavaScript Libraries -->

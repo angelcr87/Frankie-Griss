@@ -9828,28 +9828,57 @@ a.text-dark:hover, a.text-dark:focus {
 
     /* inicio de transiciones */
 
+body {
+  overflow-x: hidden !important;
+  margin: 0;
+}
+
 .fade-in-left,
 .fade-in-right {
-    opacity: 0;
-    transform: translateX(-20px); /* para fade-in-left */
-    animation-play-state: paused;
+  opacity: 0;
+  transform: translateX(-20px); 
+  animation-play-state: paused;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .fade-in-right {
-    transform: translateX(20px);
+  transform: translateX(20px);
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .fade-in-left.in-view {
-    animation: fadeInLeft 1s forwards;
-    animation-play-state: running;
+  animation: fadeInLeft 1s forwards;
+  animation-play-state: running;
 }
 .fade-in-right.in-view {
-    animation: fadeInRight 1s forwards;
-    animation-play-state: running;
+  animation: fadeInRight 1s forwards;
+  animation-play-state: running;
 }
 @keyframes fadeInLeft {
-    to { opacity: 1; transform: translateX(0); }
+  to { opacity: 1; transform: translateX(0); }
 }
 @keyframes fadeInRight {
-    to { opacity: 1; transform: translateX(0); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Fix overflow for mobile devices */
+@media (max-width: 991.98px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  .container,
+  .container-fluid,
+  .row,
+  .fade-in-left,
+  .fade-in-right {
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+  }
 }
 
     /* fin de transiciones */
@@ -9859,7 +9888,7 @@ a.text-dark:hover, a.text-dark:focus {
 
   .mensajes-carousel .mensaje-item {
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    border: 2px solid #797856;
+    /* border: 2px solid #797856; */
     transition: transform 0.3s;
 }
 .mensajes-carousel .mensaje-item:hover {
@@ -9899,7 +9928,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 .mensajes-carousel .carousel-nav-btn {
     color: #F1DD89;
-    font-size: 2rem;
+    font-size: 1rem;
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
