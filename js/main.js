@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //     });
 //   });
 
-//star script envitar mensajes
+//star script enviar mensajes
 
 $('#form-mensaje').on('submit', function(e) {
   e.preventDefault();
@@ -272,7 +272,8 @@ $('#form-mensaje').on('submit', function(e) {
   }
 
   $.ajax({
-    url: 'http://localhost:3000/insertar.php',
+    // url: 'http://localhost:3000/insertar.php',
+    url: 'https://icak.com.mx/api/insertar.php',
     method: 'POST',
     contentType: 'application/json',
     data: JSON.stringify({ nombre, mensaje }),
@@ -303,7 +304,8 @@ function mostrarModal(mensaje) {
 
 function cargarMensajes() {
   $.ajax({
-    url: 'http://localhost:3000/mensajes.php',
+    // url: 'http://localhost:3000/mensajes.php',
+    url: 'https://icak.com.mx/api/mensajes.php',
     method: 'GET',
     headers: {
       'Authorization': 'Basic ' + btoa('admin:Fr@nk&Griss2025')
